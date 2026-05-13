@@ -139,6 +139,42 @@ h1{
     font-weight: 700;
     text-shadow: 0 5px 15px rgba(46, 252, 139, 0.3);
 }
+.tagline {
+  /* Style based on Screenshot 2026-05-14 050956.png */
+  color: #63ffb4;
+  font-family: sans-serif;
+  font-size: 3.5rem;
+  font-weight: 800;
+  text-shadow: 0 0 15px rgba(99, 255, 180, 0.4);
+  line-height: 1.2;
+  max-width: 600px; /* Adjust to match the screenshot's width */
+
+  /* The Reveal Logic */
+  mask-image: linear-gradient(to right, #000 50%, transparent 50%);
+  mask-size: 200% 100%;
+  mask-position: 100% 0;
+  -webkit-mask-image: linear-gradient(to right, #000 50%, transparent 50%);
+  -webkit-mask-size: 200% 100%;
+  -webkit-mask-position: 100% 0;
+
+  /* Animation: name | duration | timing | delay | iteration-count */
+  animation: reveal-loop 4s ease-in-out infinite;
+}
+
+@keyframes reveal-loop {
+  0% {
+    -webkit-mask-position: 100% 0;
+    mask-position: 100% 0;
+  }
+  40%, 60% {
+    -webkit-mask-position: 0% 0;
+    mask-position: 0% 0;
+  }
+  100% {
+    -webkit-mask-position: -100% 0;
+    mask-position: -100% 0;
+  }
+}
 h2{
     font-size: 2rem;
     margin-bottom: 10px;
