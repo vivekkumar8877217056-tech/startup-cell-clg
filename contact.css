@@ -1,0 +1,96 @@
+.contact-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 20px;
+  background: #0d1117; /* Dark theme background */
+}
+
+.contact-container {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(10px);
+  padding: 40px;
+  border-radius: 20px;
+  border: 1px solid rgba(0, 255, 136, 0.2);
+  width: 100%;
+  max-width: 700px;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.5);
+  animation: fadeIn 1s ease-out;
+}
+
+.contact-container h2 {
+  color: #00ff88;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+/* Grid for input fields */
+.input-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap:50px;
+}
+
+.input-group {
+  margin-bottom: 20px;
+}
+
+.full-width {
+  grid-column: span 2;
+}
+
+/* Common Styles for Inputs, Select, and Textarea */
+input, select, textarea {
+  width: 100%;
+  padding: 12px 15px;
+  background: rgba(234, 230, 230, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  color:rgba(0, 255, 255, 1);
+  font-size: 1rem;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+input:focus, select:focus, textarea:focus {
+  border-color: #00ff88;
+  box-shadow: 0 0 10px rgba(0, 255, 136, 0.3);
+  transform: translateY(-2px);
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 15px;
+  background: #00ff88;
+  border: none;
+  border-radius: 8px;
+  color: #0d1117;
+  font-weight: bold;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.submit-btn:hover {
+  background: #00cc6e;
+  box-shadow: 0 0 20px rgba(0, 255, 136, 0.5);
+}
+
+/* Fade In Animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Mobile Responsive */
+@media (max-width: 600px) {
+  .input-grid {
+    grid-template-columns: 1fr; /* Stack inputs on mobile */
+  }
+  .full-width {
+    grid-column: span 1;
+  }
+  .contact-container {
+    padding: 20px;
+  }
+}
